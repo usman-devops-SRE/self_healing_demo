@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginxdemo
+  name: nginxdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginxdemo
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginxdemo
+    spec:
+      containers:
+      - image: linuxrebel/pwcdemo-nginx:1.4
+        name: pwcdemo-nginx
+        resources: {}
+status: {}
